@@ -2,7 +2,9 @@
 #pragma once
 
 #include<GL/glut.h>
-
+#include <chrono>
+#include <thread>
+#include <iostream>
 class Juego
 {
 

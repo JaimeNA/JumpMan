@@ -79,24 +79,24 @@ void Juego::ProcesarTeclado() {
 
 	if (Bufer[97]) {//Tecla A
 	
-		Mario.SetX(-1);
+		Mario.SetX(-5);
 	
 	}
 
 	if (Bufer[100]) {//Tecla D
 	
-		Mario.SetX(1);
+		Mario.SetX(5);
 	
 	}
 
 	//Si esta en el aire (no hay colicion), entonces se va a ejecutar lo sigu1ente
 
 	if (Bufer[119] && Mario.Coliciono()) {//Tecla W
-	
-		for (int i = 0; i < 300; i++) {//Va a saltar 300px hacia arriba
+
+		for (int i = 0; i < 30; i++) {//Va a saltar 150px hacia arriba
 		
-			Mario.SetY(1);
-		
+			Mario.SetY(5);
+			std::this_thread::sleep_for(std::chrono::seconds(1));
 		}
 
 	}
