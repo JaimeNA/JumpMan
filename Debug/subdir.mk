@@ -4,18 +4,24 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
+../Cuadrado.cpp \
+../Figura.cpp \
 ../Fondo.cpp \
 ../Juego.cpp \
 ../Personaje.cpp \
 ../main.cpp 
 
 OBJS += \
+./Cuadrado.o \
+./Figura.o \
 ./Fondo.o \
 ./Juego.o \
 ./Personaje.o \
 ./main.o 
 
 CPP_DEPS += \
+./Cuadrado.d \
+./Figura.d \
 ./Fondo.d \
 ./Juego.d \
 ./Personaje.d \

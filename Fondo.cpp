@@ -1,6 +1,6 @@
 #include "Fondo.h"
-
-float width, height;
+#include"Cuadrado.h"
+#include"Figura.h"
 
 Fondo::Fondo() {
 
@@ -15,7 +15,7 @@ void Fondo::Dibujar() {
 
 	glTranslatef(PosX, PosY, -1);
 
-	//Dibujando el fondo azul principa
+	//Dibujando el fondo azul principal
 	glColor3f(0.4f, 0.4f, 1.0f);
 
 	glBegin(GL_QUADS);
@@ -27,6 +27,8 @@ void Fondo::Dibujar() {
 
 	glEnd();
 
+	GenObstaculos();
+
 	glPopMatrix();
 
 }
@@ -35,4 +37,21 @@ void Fondo::Actualizar() {
 
 
 
+}
+
+void Fondo::GenObstaculos(){
+
+	Figura Linea;
+
+	Linea.SetX(100);
+	Linea.SetY(-300);
+	Linea.Dibujar('L');
+
+	Linea.SetX(500);
+	Linea.SetY(-200);
+	Linea.Dibujar('L');
+
+	Linea.SetX(300);
+	Linea.SetY(-100);
+	Linea.Dibujar('P');
 }

@@ -1,6 +1,9 @@
 #include "Personaje.h"
+#include "Figura.h"
 
 float Personaje::PosX, Personaje::PosY;
+
+list<Cuadrado> Figura::Figuras;
 
 Personaje::Personaje() {
 
@@ -10,6 +13,20 @@ Personaje::Personaje() {
 }
 
 bool Personaje::Coliciono() {
+
+	list<Cuadrado>::iterator p = Figuras.begin();
+
+	while(p != Figuras.end()){//Recorre todos los elementos de la lista
+
+		if(p->GetY() == GetY()){
+
+
+
+		}
+
+		p++;
+
+	}
 
 	if (PosY <= -180) {
 	

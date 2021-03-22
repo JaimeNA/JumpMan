@@ -7,6 +7,9 @@ Personaje Mario;
 Fondo Fondo1;
 
 bool Juego::Bufer[256];
+bool Juego::saltar = false;
+
+float Juego::VelY = 22;
 
 Juego::Juego(){
 
@@ -93,14 +96,26 @@ void Juego::ProcesarTeclado() {
 
 	if (Bufer[119] && Mario.Coliciono()) {//Tecla W
 
-		for (int i = 0; i < 30; i++) {//Va a saltar 150px hacia arriba
-		
-			Mario.SetY(5);
-			std::this_thread::sleep_for(std::chrono::seconds(1));
-		}
+		saltar = true;
+
 
 	}
+}
 
+void Juego::Saltar(){
+
+	if(saltar && Mario.GetY() < 100){
+
+		Mario.SetY(VelY);
+
+		VelY -= 0.5f;
+
+	}else{
+
+		VelY = 22;
+		saltar = false;
+
+	}
 }
 
 void Juego::Actualizar(){
@@ -114,6 +129,8 @@ void Juego::Actualizar(){
 		ProcesarTeclado();//Procesando el input del teclado almacenado en un boleano
 
 		Mario.Actualizar();
+
+		Saltar();
 
 		glutPostRedisplay();
 

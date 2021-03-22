@@ -3,6 +3,7 @@
 #include<GL/glut.h>
 #include<iostream>
 
+
 using namespace std;
 
 class Fondo
@@ -15,7 +16,7 @@ public:
 	void Dibujar();
 	void Actualizar();
 
-
+	void GenObstaculos();
 
 private:
 
