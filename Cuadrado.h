@@ -19,7 +19,6 @@ public:
 	double GetX() { return PosX; }
 	double GetY() { return PosY; }
 
-
 private:
 
 	int PosX, PosY;

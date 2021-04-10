@@ -3,7 +3,7 @@
 
 float Personaje::PosX, Personaje::PosY;
 
-list<Cuadrado> Figura::Figuras;
+Figura figura;
 
 Personaje::Personaje() {
 
@@ -14,25 +14,15 @@ Personaje::Personaje() {
 
 bool Personaje::Coliciono() {
 
-	list<Cuadrado>::iterator p = Figuras.begin();
-
-	while(p != Figuras.end()){//Recorre todos los elementos de la lista
-
-		if(p->GetY() == GetY()){
-
-
-
-		}
-
-		p++;
-
-	}
-
 	if (PosY <= -180) {
 	
 		return true;//Si colociono
 	
-	}else {
+	}/*else if(figura.Colision(PosX, PosY)){
+
+		return true;
+
+	}*/else{
 	
 		return false;//No coliciono
 	
@@ -50,10 +40,10 @@ void Personaje::Dibujar() {
 
 	glBegin(GL_QUADS);//Empezando a dibujar
 
-	glVertex2f(-10.0f, 0.0f);
-	glVertex2f(10.0f, 0.0f);
-	glVertex2f(10.0f, -20.0f);
-	glVertex2f(-10.0f, -20.0f);
+	glVertex2f(-10.0f, 10.0f);
+	glVertex2f(10.0f, 10.0f);
+	glVertex2f(10.0f, -10.0f);
+	glVertex2f(-10.0f, -10.0f);
 
 	glEnd();//Terminando de dibujar
 

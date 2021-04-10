@@ -1,7 +1,10 @@
-Personaje.o: ../Personaje.cpp ../Personaje.h ../Figura.h ../Cuadrado.h
+Personaje.o: ../Personaje.cpp ../Personaje.h ../Figura.h ../Cuadrado.h \
+ ../Juego.h
 
 ../Personaje.h:
 
 ../Figura.h:
 
 ../Cuadrado.h:
+
+../Juego.h:

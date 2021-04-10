@@ -22,6 +22,7 @@ public:
 	static void Iniciar();
 
 	static void DibujarPiso();
+	static void GenNivel(short Nivel);
 
 private:
 
@@ -32,4 +33,5 @@ private:
 	static float VelY;
 
 };
+
 

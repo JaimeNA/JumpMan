@@ -50,9 +50,7 @@ void Juego::Dibujar(){
 
 	glTranslatef(400.0f, 300.0f, 0.0f);
 
-	Fondo1.Dibujar();
-
-	DibujarPiso();
+	GenNivel(0);
 
 	Mario.Dibujar();
 
@@ -81,7 +79,7 @@ void Juego::ProcesarTeclado() {
 	//Procesando las teclas precionadas:
 
 	if (Bufer[97]) {//Tecla A
-	
+
 		Mario.SetX(-5);
 	
 	}
@@ -133,6 +131,27 @@ void Juego::Actualizar(){
 		Saltar();
 
 		glutPostRedisplay();
+
+	}
+
+}
+
+void Juego::GenNivel(short Nivel){
+
+	switch(Nivel){//Dependiendo del nivel elegido se generan disdtinto
+
+		case 0://Generando nivel 1
+
+			Fondo1.Dibujar();
+
+			DibujarPiso();
+
+		break;
+
+
+	default:
+
+	break;
 
 	}
 

@@ -1,6 +1,8 @@
 #pragma once
 
 #include "Cuadrado.h"
+#include "Personaje.h"
+#include "Juego.h"
 
 #include<GL/glut.h>
 #include<iostream>
@@ -21,6 +23,8 @@ public:
 
 	void SetX(float X) { PosX = X; }
 	void SetY(float Y) { PosY = Y; }
+
+	static bool Colision(int PerX, int PerY);
 
 private:
 

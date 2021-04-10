@@ -1,4 +1,7 @@
 #pragma once
+
+#include "Figura.h"
+
 #include<GL/glut.h>
 
 class Personaje

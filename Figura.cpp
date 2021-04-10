@@ -1,6 +1,5 @@
 
 #include "Figura.h"
-#include "Juego.h"
 
 Cuadrado Cuadro[4];//Gen los 4 cuadros que formaran la figura
 
@@ -81,5 +80,31 @@ void Figura::DibujarFiguras() {
 		p++;
 
 	}
+
+}
+
+bool Figura::Colision(int PerX, int PerY) {
+
+	int X, Y;
+
+	list<Cuadrado>::iterator p = Figuras.begin();
+
+	while(p != Figuras.end()){//Recorre todos los elementos de la lista
+
+		X = p->GetX();//Extrayendo las coord
+		Y = p->GetY();
+
+		if(abs(Y - PerY) < 20 && abs(X - PerX) < 20){
+
+			return true;
+
+		}
+
+		p++;
+
+	}
+
+	return false;
+
 
 }
