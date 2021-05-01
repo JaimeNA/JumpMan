@@ -20,8 +20,6 @@ public:
 
 private:
 
-	float PosX, PosY;
-
 	static float VelFondo;
 
 };

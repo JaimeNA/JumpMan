@@ -144,14 +144,16 @@ void Juego::GenNivel(short Nivel){
 
 			Fondo1.Dibujar();
 
+			Fondo1.GenObstaculos();
+
 			DibujarPiso();
 
 		break;
 
 
-	default:
+		default:
 
-	break;
+		break;
 
 	}
 

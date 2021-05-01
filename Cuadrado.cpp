@@ -18,7 +18,7 @@ void Cuadrado::Dibujar(){
 	glColor3f(0.4f, 0.4f, 0.4f);
 
 	glBegin(GL_QUADS);
-
+	cout << "Executan";
 	glVertex2f(0.0f, 0.0f);
 	glVertex2f(40, 0.0f);
 	glVertex2f(40, -40);
